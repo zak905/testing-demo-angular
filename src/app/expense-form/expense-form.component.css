@@ -1,0 +1,13 @@
+.expense-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 450px;
+}
+
+#addButton {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px; 
+}

@@ -1,0 +1,15 @@
+<div class="expense-container">
+  <label for="amount" >Amount: </label>
+  <input type="number" id="amount" [(ngModel)]="amount" />
+  <label for="amountVAT">VAT: </label>
+  <input type="number" id="amountVAT" [value]="amount * 0.2" [(ngModel)]="amountVAT" disabled/>
+  <label for="currency">Currency: </label>
+  <select id="currency" [(ngModel)]="selectedCurrency">
+    <option *ngFor="let currency of currencies"> {{ currency }} </option>
+  </select>
+  <label for="date"  >Date: </label>
+  <input type="date" id="date" [(ngModel)]="date"/>
+  <label for="reason">Reason: </label>
+  <textarea id="reason" [(ngModel)]="reason"> </textarea>
+  <button id="addButton" (click)="addExpense($event)">Add Expense</button>
+</div>
